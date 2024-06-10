@@ -6,7 +6,7 @@ android {
     buildToolsVersion project.ext.safeExtGet('buildToolsVersion', '33.0.0')
 
     defaultConfig {
-        minSdkVersion project.ext.safeExtGet('minSdkVersion', 24)
+        minSdkVersion rootProject.hasProperty('minSdkVersion') ? rootProject.minSdkVersion : 21
         targetSdkVersion project.ext.safeExtGet('targetSdkVersion', 33)
         versionCode 1
         versionName "1.0.0"
